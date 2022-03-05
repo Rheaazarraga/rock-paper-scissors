@@ -39,7 +39,6 @@ function makeSelection(selection) {
 
   if (yourWinner) incrementScore(yourScoreSpan)
   if (computerWinner) incrementScore(computerScoreSpan)
-  console.log(computerSelection);
 }
 
 function addSelectionResult(selection, winner) {
