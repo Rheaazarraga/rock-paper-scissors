@@ -1,4 +1,4 @@
-## <p align="center"> Rock🪨Paper📃Scissors✂️</p>
+## <p align="center"> Rock🪨Paper📃Scissors✂️
 
 ---
 
@@ -9,4 +9,6 @@
 - ⭐️ CSS
 
 ---
+![rps](https://user-images.githubusercontent.com/84409001/156870033-a9072319-b613-46ab-b8a5-478bde1caf59.png)
 
+</p>
