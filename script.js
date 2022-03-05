@@ -1,5 +1,7 @@
 const selectionButtons = document.querySelectorAll("[data-selection]");
 const finalColumn = document.querySelector("[data-final-column]");
+const computerScoreSpan = document.querySelector("[data-computer-score]");
+const yourScoreSpan = document.querySelector("[data-your-score]");
 const SELECTIONS = [
   {
     name: "rock",
@@ -34,6 +36,9 @@ function makeSelection(selection) {
 
   addSelectionResult(computerSelection, computerWinner)
   addSelectionResult(selection, yourWinner)
+
+  if (yourWinner) incrementScore(yourScoreSpan)
+  if (computerWinner) incrementScore(computerScoreSpan)
   console.log(computerSelection);
 }
 
@@ -47,13 +52,19 @@ function addSelectionResult(selection, winner) {
 
 }
 
+// handles score increment display
+function incrementScore(scoreSpan) {
+  // takes the current text, converts it to an integer and increments by 1, then saves as new text
+  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
+}
+
 function isWinner(selection, opponentSelection) {
   // check: if rock beats scissors - beats property from rock = scissors  - if name of opponent selection is "scissors", then it's confirmed that rock has beaten scissors
   return selection.beats === opponentSelection.name
 }
 
+// gives a random selection every time randomSelection is called
 function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
-  // gives a random selection every time randomSelection is called
   return SELECTIONS[ randomIndex ]
 }
