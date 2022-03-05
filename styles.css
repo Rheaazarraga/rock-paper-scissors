@@ -1,4 +1,5 @@
 body {
+  margin-top: 2rem;
   background-color: #8FD6C1;
   font-family: "Poppins";
   font-size: x-large;
@@ -14,7 +15,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 3rem;
   transition: 100ms;
 }
 
@@ -33,7 +34,7 @@ body {
 
 .result-score {
   margin-left: 0.1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #333;
 }
 
