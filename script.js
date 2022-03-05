@@ -1,6 +1,6 @@
 const selectionButtons = document.querySelectorAll("[data-selection]");
 const finalColumn = document.querySelector("[data-final-column]");
-const computerScoreSpan = document.querySelector("[data-computer-score]");
+const AIScoreSpan = document.querySelector("[data-AI-score]");
 const yourScoreSpan = document.querySelector("[data-your-score]");
 const SELECTIONS = [
   {
@@ -30,19 +30,19 @@ selectionButtons.forEach(selectionButton => {
 });
 
 function makeSelection(selection) {
-  const computerSelection = randomSelection();
-  const yourWinner = isWinner(selection, computerSelection)
-  const computerWinner = isWinner(computerSelection, selection)
+  const AiSelection = randomSelection();
+  const yourWinner = isWinner(selection, AiSelection)
+  const AiWinner = isWinner(AiSelection, selection)
 
-  addSelectionResult(computerSelection, computerWinner)
+  addSelectionResult(AiSelection, AiWinner)
   addSelectionResult(selection, yourWinner)
 
   if (yourWinner) incrementScore(yourScoreSpan)
-  if (computerWinner) incrementScore(computerScoreSpan)
+  if (AiWinner) incrementScore(AIScoreSpan)
 }
 
 function addSelectionResult(selection, winner) {
-  // allow your selection to be displayed after the Computer text
+  // allow your selection to be displayed after the AI text
   const div = document.createElement("div")
   div.innerText = selection.emoji
   div.classList.add("result-selection")
