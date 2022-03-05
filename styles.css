@@ -1,5 +1,5 @@
 body {
-  background-color: #CCC;
+  background-color: #ccc;
 }
 
 .selections {
@@ -13,5 +13,9 @@ body {
   outline: none;
   cursor: pointer;
   font-size: 2rem;
+  transition: 100ms;
+}
 
+.selection:hover {
+  transform: scale(1.4);
 }
