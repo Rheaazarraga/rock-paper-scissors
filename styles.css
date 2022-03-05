@@ -1,5 +1,6 @@
 body {
   background-color: #ccc;
+  font-size: larger;
 }
 
 .selections {
@@ -30,19 +31,16 @@ body {
 }
 
 .result-score {
-  margin-left: .1rem;
-  font-size: .8rem;
+  margin-left: 0.1rem;
+  font-size: 0.8rem;
   color: #333;
-
 }
 
 .result-selection {
-  opacity: .5;
-
+  opacity: 0.4;
 }
 
 .result-selection.winner {
   opacity: 1;
   font-size: 1.5rem;
-
 }
