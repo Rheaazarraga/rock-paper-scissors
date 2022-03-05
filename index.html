@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <div class="selections">
-      <button class="selection">🪨</button>
-      <button class="selection">📃</button>
-      <button class="selection">✂️</button>
+      <button class="selection" data-selection="rock">🪨</button>
+      <button class="selection" data-selection="paper">📃</button>
+      <button class="selection" data-selection="scissors">✂️</button>
     </div>
     <div class="results">
-      <div>You
+      <div>
+        You
         <span class="result-score">0</span>
       </div>
       <div>
@@ -23,7 +24,6 @@
         <span class="result-score">0</span>
       </div>
       <!-- <div class="result-selection winner">🪨</div>
-
       <div class="result-selection">✂️</div> -->
     </div>
   </body>
